@@ -59,10 +59,20 @@ uses UDMPrincipal, UValidacao, UFrm_CadCidade;
 procedure TFrm_CadCliente.DBEdit1Exit(Sender: TObject);
 begin
   inherited;
-  if not ValidaCPF(DBEdit1.Text) then
+  if DBEdit1.Text <> '' then
   begin
-    ShowMessage('CPF inválido!');
-    //DBEdit1.SetFocus;
+    //if not DM_Principal.FDT_Clientes.Locate('CPF',DBEdit1.Text,[]) then
+    //begin
+      if not ValidaCPF(DBEdit1.Text) then
+      begin
+        ShowMessage('CPF inválido!');
+        //DBEdit1.SetFocus;
+      end;
+    //end else
+    //begin
+      //ShowMessage('Este CPF já está cadastrado!');
+      //DBEdit1.SetFocus;
+    //end;
   end;
 
 end;

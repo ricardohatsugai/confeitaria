@@ -5,7 +5,6 @@ inherited Frm_CadCliente: TFrm_CadCliente
   TextHeight = 13
   inherited Panel1: TPanel
     Height = 160
-    ExplicitTop = 41
     ExplicitHeight = 160
     object Label1: TLabel
       Left = 16
@@ -263,7 +262,6 @@ inherited Frm_CadCliente: TFrm_CadCliente
     end
   end
   inherited Panel3: TPanel
-    ExplicitLeft = 0
     inherited DBNavigator1: TDBNavigator
       DataSource = DM_Principal.DS_Clientes
       Hints.Strings = ()

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+  Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, System.UITypes;
 
 type
   TFrm_Vendas = class(TForm)
@@ -20,8 +20,10 @@ type
     DBGrid2: TDBGrid;
     Btn_NovaVenda: TBitBtn;
     Btn_Alterar: TBitBtn;
+    Btn_Excluir: TBitBtn;
     procedure Btn_NovaVendaClick(Sender: TObject);
     procedure Btn_AlterarClick(Sender: TObject);
+    procedure Btn_ExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +53,14 @@ begin
   Finally
     FreeAndNil(Frm_CadPedido);
   End;
+end;
+
+procedure TFrm_Vendas.Btn_ExcluirClick(Sender: TObject);
+begin
+  if MessageDlg('Deseja realmente excluir?',mtConfirmation,mbYesNo,0) = ID_YES then
+  begin
+    DM_Principal.FDT_Vendas.Delete;
+  end;
 end;
 
 procedure TFrm_Vendas.Btn_NovaVendaClick(Sender: TObject);
