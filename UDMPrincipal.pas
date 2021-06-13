@@ -77,6 +77,7 @@ type
     FDT_VendasPAGAMENTO: TStringField;
     FDT_ItensPedidoPRODUTO: TStringField;
     FDT_ItensPedidoDESCRICAO: TStringField;
+    FDT_VendasTOTAL: TBCDField;
     procedure FDT_ClientesAfterPost(DataSet: TDataSet);
   private
     { Private declarations }

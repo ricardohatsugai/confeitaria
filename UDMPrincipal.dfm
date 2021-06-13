@@ -360,6 +360,12 @@ object DM_Principal: TDM_Principal
       FieldName = 'ICOD_USUARIO'
       Origin = 'ICOD_USUARIO'
     end
+    object FDT_VendasTOTAL: TBCDField
+      FieldName = 'TOTAL'
+      Origin = 'TOTAL'
+      Precision = 18
+      Size = 2
+    end
   end
   object FDT_ItensPedido: TFDTable
     IndexFieldNames = 'COD_VENDA;COD_PROD'

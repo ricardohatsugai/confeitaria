@@ -39,7 +39,10 @@ procedure TFrm_Vendas.Btn_NovaVendaClick(Sender: TObject);
 begin
   Try
     Application.CreateForm(TFrm_CadPedido, Frm_CadPedido);
+    DM_Principal.FDT_Vendas.Insert;
     Frm_CadPedido.ShowModal;
+    if DM_Principal.FDT_Vendas.State in [dsEdit, dsInsert] then
+      DM_Principal.FDT_Vendas.Cancel;
   Finally
     FreeAndNil(Frm_CadPedido);
   End;

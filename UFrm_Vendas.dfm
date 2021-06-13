@@ -32,7 +32,7 @@ object Frm_Vendas: TFrm_Vendas
       TabOrder = 0
     end
     object Btn_NovaVenda: TBitBtn
-      Left = 632
+      Left = 640
       Top = -1
       Width = 153
       Height = 42
