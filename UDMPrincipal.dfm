@@ -296,27 +296,36 @@ object DM_Principal: TDM_Principal
     Top = 40
     object FDT_VendasID_VENDA: TIntegerField
       AutoGenerateValue = arAutoInc
+      DisplayLabel = 'C'#243'digo'
       FieldName = 'ID_VENDA'
       Origin = 'ID_VENDA'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
     object FDT_VendasDATA: TDateField
+      DisplayLabel = 'Data'
       FieldName = 'DATA'
       Origin = '"DATA"'
+      EditMask = '!99/99/0000;1;_'
     end
     object FDT_VendasHORA_ENTREGA: TTimeField
+      DisplayLabel = 'Hora entrega'
       FieldName = 'HORA_ENTREGA'
       Origin = 'HORA_ENTREGA'
+      EditMask = '!90:00;1;_'
     end
     object FDT_VendasDATA_ENTREGA: TDateField
+      DisplayLabel = 'Data entrega'
       FieldName = 'DATA_ENTREGA'
       Origin = 'DATA_ENTREGA'
+      EditMask = '!99/99/0000;1;_'
     end
     object FDT_VendasCOD_CLIENTE: TIntegerField
       FieldName = 'COD_CLIENTE'
       Origin = 'COD_CLIENTE'
+      Visible = False
     end
     object FDT_VendasCLIENTE: TStringField
+      DisplayLabel = 'Cliente'
       FieldKind = fkLookup
       FieldName = 'CLIENTE'
       LookupDataSet = FDT_Clientes
@@ -329,8 +338,10 @@ object DM_Principal: TDM_Principal
     object FDT_VendasCOD_PAG: TIntegerField
       FieldName = 'COD_PAG'
       Origin = 'COD_PAG'
+      Visible = False
     end
     object FDT_VendasPAGAMENTO: TStringField
+      DisplayLabel = 'Pagamento'
       FieldKind = fkLookup
       FieldName = 'PAGAMENTO'
       LookupDataSet = FDT_Pagamentos
