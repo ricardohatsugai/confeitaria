@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
 
 type
   TFrm_Vendas = class(TForm)
@@ -18,6 +18,8 @@ type
     Panel4: TPanel;
     Panel5: TPanel;
     DBGrid2: TDBGrid;
+    Btn_NovaVenda: TBitBtn;
+    procedure Btn_NovaVendaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,6 +33,16 @@ implementation
 
 {$R *.dfm}
 
-uses UDMPrincipal;
+uses UDMPrincipal, UFrm_CadPedido;
+
+procedure TFrm_Vendas.Btn_NovaVendaClick(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TFrm_CadPedido, Frm_CadPedido);
+    Frm_CadPedido.ShowModal;
+  Finally
+    FreeAndNil(Frm_CadPedido);
+  End;
+end;
 
 end.

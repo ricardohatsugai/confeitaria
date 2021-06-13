@@ -11,7 +11,8 @@ uses
   UFrm_CadCidade in 'UFrm_CadCidade.pas' {Frm_CadCidade},
   UFrm_Cadastro_Pagamentos in 'UFrm_Cadastro_Pagamentos.pas' {Frm_Cadastro_Pagamento},
   UFrm_Cadastro_Produtos in 'UFrm_Cadastro_Produtos.pas' {Frm_Cadastro_Produtos},
-  UFrm_Vendas in 'UFrm_Vendas.pas' {Frm_Vendas};
+  UFrm_Vendas in 'UFrm_Vendas.pas' {Frm_Vendas},
+  UFrm_CadPedido in 'UFrm_CadPedido.pas' {Frm_CadPedido};
 
 {$R *.res}
 
