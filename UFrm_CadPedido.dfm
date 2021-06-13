@@ -13,6 +13,7 @@ object Frm_CadPedido: TFrm_CadPedido
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -162,6 +163,7 @@ object Frm_CadPedido: TFrm_CadPedido
       3BB33773333773333773B333333B3333333B7333333733333337}
     NumGlyphs = 2
     TabOrder = 7
+    OnClick = Btn_IncluirClick
   end
   object Btn_Alterar: TBitBtn
     Left = 188
@@ -253,6 +255,7 @@ object Frm_CadPedido: TFrm_CadPedido
         93337FFFF7737777733300000033333333337777773333333333}
       NumGlyphs = 2
       TabOrder = 1
+      OnClick = Btn_GravarClick
     end
     object Btn_CancelarPedido: TBitBtn
       Left = 183
@@ -275,6 +278,7 @@ object Frm_CadPedido: TFrm_CadPedido
         3333333777333777333333333999993333333333377777333333}
       NumGlyphs = 2
       TabOrder = 2
+      OnClick = Btn_CancelarPedidoClick
     end
   end
   object Panel2: TPanel
