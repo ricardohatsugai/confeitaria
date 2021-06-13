@@ -78,6 +78,8 @@ type
     FDT_ItensPedidoPRODUTO: TStringField;
     FDT_ItensPedidoDESCRICAO: TStringField;
     FDT_VendasTOTAL: TBCDField;
+    FDQ_Total: TFDQuery;
+    FDQ_TotalSUM_OF_TOTAL: TBCDField;
     procedure FDT_ClientesAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
