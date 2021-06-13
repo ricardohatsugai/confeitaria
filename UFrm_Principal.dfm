@@ -182,6 +182,7 @@ object Frm_Principal: TFrm_Principal
       object Nova1: TMenuItem
         Caption = 'Nova venda'
         ShortCut = 116
+        OnClick = Nova1Click
       end
     end
   end

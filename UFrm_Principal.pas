@@ -52,6 +52,7 @@ type
     procedure Produtos1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Nova1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,7 +68,7 @@ implementation
 {$R *.dfm}
 
 uses UFrm_Login, UDMPrincipal, UFrm_CadClientes, UFrm_CadCidade,
-  UFrm_Cadastro_Pagamentos, UFrm_Cadastro_Produtos;
+  UFrm_Cadastro_Pagamentos, UFrm_Cadastro_Produtos, UFrm_Vendas;
 
 procedure TFrm_Principal.Cidades1Click(Sender: TObject);
 begin
@@ -145,6 +146,24 @@ begin
 
   FDQ_ClientesQueFazemAniversario.Params[0].AsInteger := mes;
   FDQ_ClientesQueFazemAniversario.Active := True;
+end;
+
+procedure TFrm_Principal.Nova1Click(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TFrm_Vendas, Frm_Vendas);
+    DM_Principal.FDT_Vendas.Active := True;
+    DM_Principal.FDT_ItensPedido.Active := True;
+    DM_Principal.FDT_Produtos.Active := True;
+    DM_Principal.FDT_Pagamentos.Active := True;
+    Frm_Vendas.ShowModal;
+    DM_Principal.FDT_ItensPedido.Active := False;
+    DM_Principal.FDT_Vendas.Active := False;
+    DM_Principal.FDT_Produtos.Active := False;
+    DM_Principal.FDT_Pagamentos.Active := False;
+  Finally
+    FreeAndNil(Frm_Vendas);
+  End;
 end;
 
 procedure TFrm_Principal.Pagamentos1Click(Sender: TObject);
