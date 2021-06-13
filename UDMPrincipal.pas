@@ -56,8 +56,28 @@ type
     FDT_ProdutosPRECO: TBCDField;
     FDQ_CidadesCOD_ESTADO: TIntegerField;
     FDQ_CidadesESTADO: TStringField;
-    FDTable1: TFDTable;
-    FDTable2: TFDTable;
+    FDT_Vendas: TFDTable;
+    FDT_ItensPedido: TFDTable;
+    FDT_VendasID_VENDA: TIntegerField;
+    FDT_VendasDATA: TDateField;
+    FDT_VendasHORA_ENTREGA: TTimeField;
+    FDT_VendasDATA_ENTREGA: TDateField;
+    FDT_VendasCOD_CLIENTE: TIntegerField;
+    FDT_VendasCOD_PAG: TIntegerField;
+    FDT_VendasOBS: TStringField;
+    FDT_VendasICOD_USUARIO: TIntegerField;
+    FDT_ItensPedidoCOD_VENDA: TIntegerField;
+    FDT_ItensPedidoCOD_PROD: TIntegerField;
+    FDT_ItensPedidoQUANT: TBCDField;
+    FDT_ItensPedidoPRECO: TBCDField;
+    FDT_ItensPedidoTOTAL: TBCDField;
+    DS_Vendas: TDataSource;
+    DS_ItensPedido: TDataSource;
+    FDT_VendasCLIENTE: TStringField;
+    FDT_VendasPAGAMENTO: TStringField;
+    FDT_ItensPedidoPRODUTO: TStringField;
+    FDT_ItensPedidoDESCRICAO: TStringField;
+    FDT_VendasTOTAL: TBCDField;
     procedure FDT_ClientesAfterPost(DataSet: TDataSet);
   private
     { Private declarations }

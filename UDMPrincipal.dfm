@@ -287,14 +287,154 @@ object DM_Principal: TDM_Principal
       Size = 2
     end
   end
-  object FDTable1: TFDTable
+  object FDT_Vendas: TFDTable
+    IndexFieldNames = 'ID_VENDA'
     Connection = FDConnection1
+    UpdateOptions.UpdateTableName = 'VENDAS'
+    TableName = 'VENDAS'
     Left = 768
     Top = 40
+    object FDT_VendasID_VENDA: TIntegerField
+      AutoGenerateValue = arAutoInc
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'ID_VENDA'
+      Origin = 'ID_VENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDT_VendasDATA: TDateField
+      DisplayLabel = 'Data'
+      FieldName = 'DATA'
+      Origin = '"DATA"'
+      EditMask = '!99/99/0000;1;_'
+    end
+    object FDT_VendasHORA_ENTREGA: TTimeField
+      DisplayLabel = 'Hora entrega'
+      FieldName = 'HORA_ENTREGA'
+      Origin = 'HORA_ENTREGA'
+      EditMask = '!90:00;1;_'
+    end
+    object FDT_VendasDATA_ENTREGA: TDateField
+      DisplayLabel = 'Data entrega'
+      FieldName = 'DATA_ENTREGA'
+      Origin = 'DATA_ENTREGA'
+      EditMask = '!99/99/0000;1;_'
+    end
+    object FDT_VendasCOD_CLIENTE: TIntegerField
+      FieldName = 'COD_CLIENTE'
+      Origin = 'COD_CLIENTE'
+      Visible = False
+    end
+    object FDT_VendasCLIENTE: TStringField
+      DisplayLabel = 'Cliente'
+      FieldKind = fkLookup
+      FieldName = 'CLIENTE'
+      LookupDataSet = FDT_Clientes
+      LookupKeyFields = 'ID_CLIENTE'
+      LookupResultField = 'NOME'
+      KeyFields = 'COD_CLIENTE'
+      Size = 35
+      Lookup = True
+    end
+    object FDT_VendasCOD_PAG: TIntegerField
+      FieldName = 'COD_PAG'
+      Origin = 'COD_PAG'
+      Visible = False
+    end
+    object FDT_VendasPAGAMENTO: TStringField
+      DisplayLabel = 'Pagamento'
+      FieldKind = fkLookup
+      FieldName = 'PAGAMENTO'
+      LookupDataSet = FDT_Pagamentos
+      LookupKeyFields = 'ID_PAG'
+      LookupResultField = 'PAGAMENTO'
+      KeyFields = 'COD_PAG'
+      Size = 25
+      Lookup = True
+    end
+    object FDT_VendasOBS: TStringField
+      FieldName = 'OBS'
+      Origin = 'OBS'
+      Size = 50
+    end
+    object FDT_VendasICOD_USUARIO: TIntegerField
+      FieldName = 'ICOD_USUARIO'
+      Origin = 'ICOD_USUARIO'
+    end
+    object FDT_VendasTOTAL: TBCDField
+      FieldName = 'TOTAL'
+      Origin = 'TOTAL'
+      Precision = 18
+      Size = 2
+    end
   end
-  object FDTable2: TFDTable
+  object FDT_ItensPedido: TFDTable
+    IndexFieldNames = 'COD_VENDA;COD_PROD'
+    MasterSource = DS_Vendas
+    MasterFields = 'ID_VENDA'
     Connection = FDConnection1
+    UpdateOptions.UpdateTableName = 'ITEM_VENDA'
+    TableName = 'ITEM_VENDA'
     Left = 856
     Top = 40
+    object FDT_ItensPedidoCOD_VENDA: TIntegerField
+      FieldName = 'COD_VENDA'
+      Origin = 'COD_VENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDT_ItensPedidoCOD_PROD: TIntegerField
+      FieldName = 'COD_PROD'
+      Origin = 'COD_PROD'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDT_ItensPedidoPRODUTO: TStringField
+      FieldKind = fkLookup
+      FieldName = 'PRODUTO'
+      LookupDataSet = FDT_Produtos
+      LookupKeyFields = 'ID_PRODUTOS'
+      LookupResultField = 'PRODUTO'
+      KeyFields = 'COD_PROD'
+      Size = 35
+      Lookup = True
+    end
+    object FDT_ItensPedidoDESCRICAO: TStringField
+      FieldKind = fkLookup
+      FieldName = 'DESCRICAO'
+      LookupDataSet = FDT_Produtos
+      LookupKeyFields = 'ID_PRODUTOS'
+      LookupResultField = 'DESCRICAO'
+      KeyFields = 'COD_PROD'
+      Size = 35
+      Lookup = True
+    end
+    object FDT_ItensPedidoQUANT: TBCDField
+      FieldName = 'QUANT'
+      Origin = 'QUANT'
+      Precision = 18
+      Size = 2
+    end
+    object FDT_ItensPedidoPRECO: TBCDField
+      FieldName = 'PRECO'
+      Origin = 'PRECO'
+      Precision = 18
+      Size = 2
+    end
+    object FDT_ItensPedidoTOTAL: TBCDField
+      FieldName = 'TOTAL'
+      Origin = 'TOTAL'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object DS_Vendas: TDataSource
+    DataSet = FDT_Vendas
+    Left = 768
+    Top = 96
+  end
+  object DS_ItensPedido: TDataSource
+    DataSet = FDT_ItensPedido
+    Left = 856
+    Top = 96
   end
 end

@@ -134,6 +134,18 @@
             <Form>Frm_Cadastro_Produtos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UFrm_Vendas.pas">
+            <Form>Frm_Vendas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrm_CadPedido.pas">
+            <Form>Frm_CadPedido</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrm_CadItemDePedido.pas">
+            <Form>Frm_CadItensDePedido</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

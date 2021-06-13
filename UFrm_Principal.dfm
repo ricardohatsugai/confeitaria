@@ -180,8 +180,9 @@ object Frm_Principal: TFrm_Principal
     object Vendas1: TMenuItem
       Caption = 'Vendas'
       object Nova1: TMenuItem
-        Caption = 'Nova venda'
+        Caption = 'Listagem de vendas'
         ShortCut = 116
+        OnClick = Nova1Click
       end
     end
   end
