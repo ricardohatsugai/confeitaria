@@ -213,10 +213,6 @@ object Frm_CadItensDePedido: TFrm_CadItensDePedido
     Height = 404
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 344
-    ExplicitTop = 256
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1

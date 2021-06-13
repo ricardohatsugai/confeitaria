@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask,
-  Vcl.Buttons, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+  Vcl.Buttons, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, FireDAC.Stan.Param;
 
 type
   TFrm_CadPedido = class(TForm)
@@ -37,6 +37,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure Btn_CancelarPedidoClick(Sender: TObject);
     procedure Btn_GravarClick(Sender: TObject);
+    procedure Btn_AlterarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +52,31 @@ implementation
 {$R *.dfm}
 
 uses UDMPrincipal, UFrm_CadItemDePedido;
+
+procedure TFrm_CadPedido.Btn_AlterarClick(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TFrm_CadItensDePedido, Frm_CadItensDePedido);
+    DM_Principal.FDT_Vendas.Post;
+    DM_Principal.FDT_ItensPedido.Edit;
+    Frm_CadItensDePedido.ShowModal;
+    if DM_Principal.FDT_ItensPedido.State in [dsEdit,dsInsert] then
+    begin
+      DM_Principal.FDT_ItensPedido.Cancel;
+      DM_Principal.FDT_Vendas.Edit;
+    DM_Principal.FDQ_Total.Params[0].AsInteger := DM_Principal.FDT_VendasID_VENDA.AsInteger;
+    DM_Principal.FDQ_Total.Active := True;
+    DM_Principal.FDT_VendasTOTAL.AsCurrency := DM_Principal.FDQ_TotalSUM_OF_TOTAL.AsCurrency;
+    DM_Principal.FDQ_Total.Active := False;
+    end;
+    DM_Principal.FDQ_Total.Params[0].AsInteger := DM_Principal.FDT_VendasID_VENDA.AsInteger;
+    DM_Principal.FDQ_Total.Active := True;
+    DM_Principal.FDT_VendasTOTAL.AsCurrency := DM_Principal.FDQ_TotalSUM_OF_TOTAL.AsCurrency;
+    DM_Principal.FDQ_Total.Active := False;
+  Finally
+    FreeAndNil(Frm_CadItensDePedido);
+  End;
+end;
 
 procedure TFrm_CadPedido.Btn_CancelarPedidoClick(Sender: TObject);
 begin
@@ -80,6 +106,10 @@ begin
       DM_Principal.FDT_ItensPedido.Cancel;
       DM_Principal.FDT_Vendas.Edit;
     end;
+    DM_Principal.FDQ_Total.Params[0].AsInteger := DM_Principal.FDT_VendasID_VENDA.AsInteger;
+    DM_Principal.FDQ_Total.Active := True;
+    DM_Principal.FDT_VendasTOTAL.AsCurrency := DM_Principal.FDQ_TotalSUM_OF_TOTAL.AsCurrency;
+    DM_Principal.FDQ_Total.Active := False;
   Finally
     FreeAndNil(Frm_CadItensDePedido);
   End;

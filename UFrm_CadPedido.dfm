@@ -186,6 +186,7 @@ object Frm_CadPedido: TFrm_CadPedido
       00333377737FFFFF773333303300000003333337337777777333}
     NumGlyphs = 2
     TabOrder = 8
+    OnClick = Btn_AlterarClick
   end
   object Btn_Excluir: TBitBtn
     Left = 352

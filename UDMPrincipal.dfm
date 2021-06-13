@@ -437,4 +437,34 @@ object DM_Principal: TDM_Principal
     Left = 856
     Top = 96
   end
+  object FDQ_Total: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select '
+      '    sum( item_venda.total ) sum_of_total'
+      'from item_venda'
+      '   inner join vendas on (item_venda.cod_venda = vendas.id_venda)'
+      'where '
+      '   ('
+      '      (vendas.id_venda =:cod_vend)'
+      '   )')
+    Left = 768
+    Top = 160
+    ParamData = <
+      item
+        Name = 'COD_VEND'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQ_TotalSUM_OF_TOTAL: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'SUM_OF_TOTAL'
+      Origin = 'SUM_OF_TOTAL'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 18
+      Size = 2
+    end
+  end
 end
