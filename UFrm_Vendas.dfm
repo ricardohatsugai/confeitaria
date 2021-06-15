@@ -3,8 +3,8 @@ object Frm_Vendas: TFrm_Vendas
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = '  Vendas'
-  ClientHeight = 620
-  ClientWidth = 1073
+  ClientHeight = 734
+  ClientWidth = 1393
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,10 +18,11 @@ object Frm_Vendas: TFrm_Vendas
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1073
+    Width = 1393
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 1073
     object DBNavigator1: TDBNavigator
       Left = 1
       Top = 1
@@ -32,7 +33,7 @@ object Frm_Vendas: TFrm_Vendas
       TabOrder = 0
     end
     object Btn_NovaVenda: TBitBtn
-      Left = 544
+      Left = 792
       Top = -1
       Width = 153
       Height = 42
@@ -55,7 +56,7 @@ object Frm_Vendas: TFrm_Vendas
       OnClick = Btn_NovaVendaClick
     end
     object Btn_Alterar: TBitBtn
-      Left = 728
+      Left = 976
       Top = 0
       Width = 153
       Height = 40
@@ -78,7 +79,7 @@ object Frm_Vendas: TFrm_Vendas
       OnClick = Btn_AlterarClick
     end
     object Btn_Excluir: TBitBtn
-      Left = 919
+      Left = 1167
       Top = 0
       Width = 153
       Height = 40
@@ -104,13 +105,14 @@ object Frm_Vendas: TFrm_Vendas
   object Panel2: TPanel
     Left = 0
     Top = 41
-    Width = 1073
+    Width = 1393
     Height = 48
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 1073
     object Label1: TLabel
-      Left = 456
-      Top = 6
+      Left = 584
+      Top = 2
       Width = 134
       Height = 40
       Caption = 'PEDIDOS'
@@ -125,17 +127,24 @@ object Frm_Vendas: TFrm_Vendas
   object Panel3: TPanel
     Left = 0
     Top = 89
-    Width = 1073
+    Width = 1393
     Height = 216
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 1073
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 1071
+      Width = 1391
       Height = 214
       Align = alClient
       DataSource = DM_Principal.DS_Vendas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
@@ -184,7 +193,7 @@ object Frm_Vendas: TFrm_Vendas
   object Panel4: TPanel
     Left = 0
     Top = 305
-    Width = 1073
+    Width = 1393
     Height = 41
     Align = alTop
     Caption = 'ITENS DE PEDIDOS'
@@ -195,21 +204,31 @@ object Frm_Vendas: TFrm_Vendas
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    ExplicitLeft = -24
+    ExplicitTop = 310
   end
   object Panel5: TPanel
     Left = 0
     Top = 346
-    Width = 1073
-    Height = 274
+    Width = 1393
+    Height = 388
     Align = alClient
     TabOrder = 4
+    ExplicitWidth = 1073
+    ExplicitHeight = 274
     object DBGrid2: TDBGrid
       Left = 1
       Top = 1
-      Width = 1071
-      Height = 272
+      Width = 1391
+      Height = 386
       Align = alClient
       DataSource = DM_Principal.DS_ItensPedido
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET

@@ -3,8 +3,8 @@ object Frm_Login: TFrm_Login
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Autentica'#231#227'o de Usu'#225'rio'
-  ClientHeight = 260
-  ClientWidth = 339
+  ClientHeight = 391
+  ClientWidth = 593
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,65 +16,65 @@ object Frm_Login: TFrm_Login
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 64
-    Top = 24
-    Width = 175
-    Height = 29
+    Left = 160
+    Top = 32
+    Width = 234
+    Height = 39
     Caption = 'Login de usu'#225'rio'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
+    Font.Color = clBlue
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Lbl_Usuario: TLabel
-    Left = 48
-    Top = 96
-    Width = 60
-    Height = 19
+    Left = 64
+    Top = 117
+    Width = 117
+    Height = 39
     Caption = 'Usu'#225'rio:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Lbl_Senha: TLabel
-    Left = 59
-    Top = 139
-    Width = 49
-    Height = 19
+    Left = 82
+    Top = 197
+    Width = 99
+    Height = 39
     Caption = 'Senha:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Edt_Usuario: TEdit
-    Left = 114
-    Top = 93
-    Width = 167
-    Height = 27
+    Left = 203
+    Top = 109
+    Width = 246
+    Height = 47
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
   end
   object Edt_Senha: TEdit
-    Left = 114
-    Top = 136
-    Width = 167
-    Height = 27
+    Left = 203
+    Top = 194
+    Width = 246
+    Height = 47
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
@@ -82,15 +82,15 @@ object Frm_Login: TFrm_Login
     TabOrder = 1
   end
   object Btn_Login: TBitBtn
-    Left = 32
-    Top = 184
-    Width = 115
-    Height = 35
+    Left = 48
+    Top = 288
+    Width = 201
+    Height = 57
     Caption = '&Autenticar'
     Default = True
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     Glyph.Data = {
@@ -112,14 +112,14 @@ object Frm_Login: TFrm_Login
     OnClick = Btn_LoginClick
   end
   object Btn_Cancelar: TBitBtn
-    Left = 176
-    Top = 184
-    Width = 115
-    Height = 35
+    Left = 296
+    Top = 288
+    Width = 201
+    Height = 57
     Caption = '&Cancelar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -32
     Font.Name = 'Tahoma'
     Font.Style = []
     Glyph.Data = {

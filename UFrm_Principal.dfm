@@ -3,8 +3,8 @@ object Frm_Principal: TFrm_Principal
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = '  Sistema de Controle de Vendas V.1'
-  ClientHeight = 585
-  ClientWidth = 995
+  ClientHeight = 817
+  ClientWidth = 1524
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object Frm_Principal: TFrm_Principal
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 566
-    Width = 995
+    Top = 798
+    Width = 1524
     Height = 19
     Panels = <
       item
@@ -38,12 +38,12 @@ object Frm_Principal: TFrm_Principal
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 995
+    Width = 1524
     Height = 49
     Align = alTop
     TabOrder = 1
     object Label1: TLabel
-      Left = 232
+      Left = 504
       Top = 5
       Width = 499
       Height = 29
@@ -59,17 +59,23 @@ object Frm_Principal: TFrm_Principal
   object Panel2: TPanel
     Left = 0
     Top = 49
-    Width = 995
+    Width = 1524
     Height = 224
     Align = alTop
     TabOrder = 2
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 993
+      Width = 1522
       Height = 222
       Align = alClient
       DataSource = DS_ClientesSemCompras
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
@@ -103,16 +109,16 @@ object Frm_Principal: TFrm_Principal
   object Panel3: TPanel
     Left = 0
     Top = 273
-    Width = 995
+    Width = 1524
     Height = 41
     Align = alTop
     TabOrder = 3
     object Label2: TLabel
-      Left = 304
+      Left = 568
       Top = 5
-      Width = 380
+      Width = 412
       Height = 29
-      Caption = 'Clientes que fazem anivers'#225'rio hoje'
+      Caption = 'Clientes que fazem anivers'#225'rio no m'#234's'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -24
@@ -124,17 +130,23 @@ object Frm_Principal: TFrm_Principal
   object Panel4: TPanel
     Left = 0
     Top = 314
-    Width = 995
-    Height = 252
+    Width = 1524
+    Height = 484
     Align = alClient
     TabOrder = 4
     object DBGrid2: TDBGrid
       Left = 1
       Top = 1
-      Width = 993
-      Height = 250
+      Width = 1522
+      Height = 482
       Align = alClient
       DataSource = DS_ClientesQueFazemAniversario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
@@ -240,6 +252,7 @@ object Frm_Principal: TFrm_Principal
     end
   end
   object DS_ClientesSemCompras: TDataSource
+    AutoEdit = False
     DataSet = FDQ_ClientesSemCompras
     Left = 664
     Top = 153
