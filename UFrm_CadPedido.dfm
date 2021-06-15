@@ -3,8 +3,8 @@ object Frm_CadPedido: TFrm_CadPedido
   Top = 0
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Cadastro de nova venda'
-  ClientHeight = 659
-  ClientWidth = 1069
+  ClientHeight = 681
+  ClientWidth = 1079
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,65 +18,113 @@ object Frm_CadPedido: TFrm_CadPedido
   TextHeight = 13
   object Label1: TLabel
     Left = 24
-    Top = 16
-    Width = 33
-    Height = 13
+    Top = 9
+    Width = 50
+    Height = 19
     Caption = 'C'#243'digo'
     FocusControl = DBEdit_Id
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label2: TLabel
     Left = 104
-    Top = 16
-    Width = 23
-    Height = 13
+    Top = 9
+    Width = 32
+    Height = 19
     Caption = 'Data'
     FocusControl = DBEdit_Data
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 208
-    Top = 16
-    Width = 64
-    Height = 13
+    Top = 9
+    Width = 92
+    Height = 19
     Caption = 'Hora entrega'
     FocusControl = DBEdit1_HoraEntrega
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label4: TLabel
-    Left = 296
-    Top = 16
-    Width = 64
-    Height = 13
+    Left = 316
+    Top = 9
+    Width = 90
+    Height = 19
     Caption = 'Data entrega'
     FocusControl = DBEdit_DataEntrega
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label5: TLabel
-    Left = 383
-    Top = 16
-    Width = 33
-    Height = 13
+    Left = 436
+    Top = 9
+    Width = 48
+    Height = 19
     Caption = 'Cliente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label6: TLabel
-    Left = 640
-    Top = 16
-    Width = 54
-    Height = 13
+    Left = 693
+    Top = 9
+    Width = 79
+    Height = 19
     Caption = 'Pagamento'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label7: TLabel
     Left = 24
     Top = 64
-    Width = 20
-    Height = 13
+    Width = 30
+    Height = 19
     Caption = 'OBS'
     FocusControl = DBEdit_Obs
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object DBEdit_Id: TDBEdit
     Left = 24
     Top = 32
     Width = 65
-    Height = 21
+    Height = 27
     DataField = 'ID_VENDA'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     ReadOnly = True
     TabOrder = 0
   end
@@ -84,70 +132,111 @@ object Frm_CadPedido: TFrm_CadPedido
     Left = 104
     Top = 32
     Width = 89
-    Height = 21
+    Height = 27
     DataField = 'DATA'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     ReadOnly = True
     TabOrder = 1
   end
   object DBEdit1_HoraEntrega: TDBEdit
     Left = 208
     Top = 32
-    Width = 73
-    Height = 21
+    Width = 92
+    Height = 27
     DataField = 'HORA_ENTREGA'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object DBEdit_DataEntrega: TDBEdit
-    Left = 296
+    Left = 316
     Top = 32
-    Width = 81
-    Height = 21
+    Width = 90
+    Height = 27
     DataField = 'DATA_ENTREGA'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object DBLookupCMB_Clientes: TDBLookupComboBox
-    Left = 383
+    Left = 436
     Top = 32
     Width = 242
-    Height = 21
+    Height = 27
     DataField = 'COD_CLIENTE'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     KeyField = 'ID_CLIENTE'
     ListField = 'NOME'
     ListSource = DM_Principal.DS_Clientes
+    ParentFont = False
     TabOrder = 4
   end
   object DBLookupCMB_Pagamento: TDBLookupComboBox
-    Left = 640
+    Left = 693
     Top = 32
     Width = 209
-    Height = 21
+    Height = 27
     DataField = 'COD_PAG'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     KeyField = 'ID_PAG'
     ListField = 'PAGAMENTO'
     ListSource = DM_Principal.DS_Pagamento
+    ParentFont = False
     TabOrder = 5
   end
   object DBEdit_Obs: TDBEdit
     Left = 24
-    Top = 80
+    Top = 84
     Width = 825
-    Height = 21
+    Height = 27
     CharCase = ecUpperCase
     DataField = 'OBS'
     DataSource = DM_Principal.DS_Vendas
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
   end
   object Btn_Incluir: TBitBtn
     Left = 24
-    Top = 107
+    Top = 131
     Width = 135
     Height = 35
     Caption = 'Incluir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -162,15 +251,21 @@ object Frm_CadPedido: TFrm_CadPedido
       B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
       3BB33773333773333773B333333B3333333B7333333733333337}
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 7
     OnClick = Btn_IncluirClick
   end
   object Btn_Alterar: TBitBtn
     Left = 188
-    Top = 107
+    Top = 131
     Width = 135
     Height = 35
     Caption = 'Editar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -185,15 +280,21 @@ object Frm_CadPedido: TFrm_CadPedido
       0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
       00333377737FFFFF773333303300000003333337337777777333}
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 8
     OnClick = Btn_AlterarClick
   end
   object Btn_Excluir: TBitBtn
     Left = 352
-    Top = 107
+    Top = 131
     Width = 135
     Height = 35
     Caption = 'Excluir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -208,30 +309,45 @@ object Frm_CadPedido: TFrm_CadPedido
       333333377F33333333FF3333C333333330003333733333333777333333333333
       3000333333333333377733333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 9
   end
   object Panel1: TPanel
     Left = 0
-    Top = 600
-    Width = 1069
+    Top = 622
+    Width = 1079
     Height = 59
     Align = alBottom
     TabOrder = 10
+    ExplicitTop = 600
+    ExplicitWidth = 1069
     object Label8: TLabel
-      Left = 936
-      Top = 8
-      Width = 32
-      Height = 13
+      Left = 875
+      Top = 14
+      Width = 55
+      Height = 23
       Caption = 'TOTAL'
       FocusControl = DBEdit_Total
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
     end
     object DBEdit_Total: TDBEdit
-      Left = 936
-      Top = 24
+      Left = 944
+      Top = 12
       Width = 113
-      Height = 21
+      Height = 31
       DataField = 'TOTAL'
       DataSource = DM_Principal.DS_Vendas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       ReadOnly = True
       TabOrder = 0
     end
@@ -284,15 +400,17 @@ object Frm_CadPedido: TFrm_CadPedido
   end
   object Panel2: TPanel
     Left = 0
-    Top = 160
-    Width = 1069
+    Top = 182
+    Width = 1079
     Height = 440
     Align = alBottom
     TabOrder = 11
+    ExplicitTop = 160
+    ExplicitWidth = 1069
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 1067
+      Width = 1077
       Height = 438
       Align = alClient
       DataSource = DM_Principal.DS_ItensPedido

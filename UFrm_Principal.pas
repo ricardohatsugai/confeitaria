@@ -137,15 +137,17 @@ procedure TFrm_Principal.FormShow(Sender: TObject);
 var dia, mes, ano : Word; Data: TDateTime;
 begin
   Data := Now;
+
   DecodeDate(Data, ano, mes, dia);
 
   DM_Principal.FDConnection1.Connected := True;
 
-  FDQ_ClientesSemCompras.Params[0].AsDate := Now;
+  FDQ_ClientesSemCompras.Params[0].AsDate := Now - 20;
   FDQ_ClientesSemCompras.Active := True;
 
   FDQ_ClientesQueFazemAniversario.Params[0].AsInteger := mes;
   FDQ_ClientesQueFazemAniversario.Active := True;
+
 end;
 
 procedure TFrm_Principal.Nova1Click(Sender: TObject);
